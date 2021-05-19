@@ -2,8 +2,8 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"./model/models",
-	"./controller/ErrorHandler"
-], function (UIComponent, Device, models, ErrorHandler) {
+// 	"./controller/ErrorHandler"
+], function (UIComponent, Device, models) {
 	"use strict";
 
 	return UIComponent.extend("LMES.CovidTracker2021.Component", {
