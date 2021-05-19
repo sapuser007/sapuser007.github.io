@@ -3,7 +3,7 @@
 	<Page title="Please Select Your State" class="sapUiSizeCompact"> 
 					<subHeader>
 						<OverflowToolbar>
-							<SearchField id="searchState" liveChange="onSearch" placeholder="Search State"/>
+							<SearchField id="searchState" liveChange="onSearch" placeholder="Search State" width="100%"/>
 						</OverflowToolbar>
 					</subHeader>		
 		<content>
