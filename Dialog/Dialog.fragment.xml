@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<Dialog title="Address" id="fragTitle">
+		<form:SimpleForm class="sapUiSizeCompact" id="idSimpleForm">
+			<form:content>
+				<Label text="Centre Id" design="Bold"></Label>
+				<Text text="{AddressData>/center_id}"></Text>
+				<Label text="Centre Name" design="Bold"></Label>
+				<Text text="{AddressData>/name}"></Text>
+				<Label text="Centre Address" design="Bold"></Label>
+				<Text text="{AddressData>/address}"></Text>
+				<Label text="Area" design="Bold"></Label>
+				<Text text="{AddressData>/block_name}"></Text>
+				<Label text="District" design="Bold"></Label>
+				<Text text="{AddressData>/district_name}"></Text>
+				<Label text="State" design="Bold"></Label>
+				<Text text="{AddressData>/state_name}"></Text>
+				<Label text="Pincode" design="Bold"></Label>
+				<Text text="{AddressData>/pincode}"></Text>
+				<Label text="Book Appointment" design="Bold"></Label>
+				<Button icon="sap-icon://appointment" press="bookAppointment" width="9%"></Button>
+			</form:content>
+		</form:SimpleForm>
+		<beginButton>
+			<Button text="Close" type="Ghost" press="fragClose"></Button>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

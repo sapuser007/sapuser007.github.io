@@ -1,0 +1,87 @@
+<!--<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">-->
+<!--	<ResponsivePopover title="Options" placement="Bottom" afterOpen="onOpen">-->
+<!--		<content>-->
+<!--			<List>-->
+<!--				<items> -->
+<!--					<CustomListItem type="Active" press="onAscending">-->
+<!--						<HBox alignItems="Center" justifyContent="Center" class="HBoxStyle">-->
+<!--							<Label text="Sort Ascending" design="Bold"/>-->
+<!--						</HBox>-->
+<!--					</CustomListItem>-->
+<!--					<CustomListItem type="Active" press="onDescending">-->
+<!--						<HBox alignItems="Center" justifyContent="Center" class="HBoxStyle">-->
+<!--							<Label text="Sort Descending" design="Bold"/>-->
+<!--						</HBox>-->
+<!--					</CustomListItem>-->
+<!--					<CustomListItem>-->
+<!--						<HBox alignItems="Center" justifyContent="Center" class="HBoxStyle">-->
+<!--							<Label text="Filter :" design="Bold"/>-->
+<!--							<Input width="90%" change="onChange"/>-->
+<!--						</HBox>-->
+<!--					</CustomListItem>-->
+<!--				</items>-->
+<!--			</List>-->
+<!--		</content>-->
+<!--	</ResponsivePopover>-->
+<!--</core:FragmentDefinition>-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<Dialog id="idDialog">
+		<form:SimpleForm class="sapUiSizeCompact">
+			<form:content>
+				<!--<List id="slotList" items="{slotsData>/sessions}">-->
+				<!--	<ObjectListItem title="{slotsData>date}" number="{slotsData>available_capacity}"></ObjectListItem>-->
+				<!--</List>-->
+				<Table id="slotList" items="{slotsData>/sessions}" popinLayout="Block" growing="true" alternateRowColors="true" width="auto"
+					fixedLayout="false">
+					<!--<headerToolbar>-->
+					<!--	<OverflowToolbar>-->
+					<!--		<content>-->
+					<!--			<SearchField id="searchCentre" width="45%" liveChange="onFilterCentre" placeholder="Search Based Centre Name"></SearchField>-->
+					<!--			<ToolbarSpacer/>-->
+					<!--			<SearchField id="searchArea" width="45%" liveChange="onFilterArea" placeholder="Search Based on Area"></SearchField>-->
+					<!--		</content>-->
+					<!--	</OverflowToolbar>-->
+					<!--</headerToolbar>-->
+					<columns>
+						<Column demandPopin="true">
+							<Label text="Date" design="Bold"/>
+						</Column>
+						<Column demandPopin="true" minScreenWidth="Small">
+							<Label text="Available Capacity" design="Bold"/>
+						</Column>
+						<Column demandPopin="true" minScreenWidth="Small">
+							<Label text="Age Limit" design="Bold" wrappingType="Normal" wrapping="true"/>
+						</Column>
+						<Column demandPopin="true" minScreenWidth="Small">
+							<Label text="Vaccine" design="Bold" wrappingType="Hyphenated" wrapping="true"/>
+						</Column>
+						<Column demandPopin="true" minScreenWidth="Small">
+							<Label text="1st Dose Slot" design="Bold"/>
+						</Column>
+						<Column demandPopin="true" minScreenWidth="Small">
+							<Label text="2nd Dose Slot" design="Bold"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem press="handleNav">
+							<cells>
+								<Text text="{slotsData>date}"/>
+								<ObjectNumber number="{slotsData>available_capacity}" state="{ path: 'slotsData>available_capacity', formatter: '.formatter.doseCheck' }"/>
+								<ObjectStatus text="{ path: 'slotsData>min_age_limit', formatter: '.formatter.ageAdjust' }"
+									state="{ path: 'slotsData>min_age_limit', formatter: '.formatter.ageCheck' }"/>
+								<ObjectStatus text="{slotsData>vaccine}" state="{ path: 'slotsData>vaccine', formatter: '.formatter.vaccineCheck' }"/>
+								<ObjectNumber number="{slotsData>available_capacity_dose1}"
+									state="{ path: 'slotsData>available_capacity_dose1', formatter: '.formatter.doseCheck' }"/>
+								<ObjectNumber number="{slotsData>available_capacity_dose2}"
+									state="{ path: 'slotsData>available_capacity_dose2', formatter: '.formatter.doseCheck' }"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</form:content>
+		</form:SimpleForm>
+		<beginButton>
+			<Button text="Close" type="Emphasized" press="fragSlotClose"></Button>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>
