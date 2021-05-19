@@ -1,12 +1,12 @@
 <mvc:View controllerName="LMES.CovidTracker2021.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic"
 	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
 	<Page title="Please Select Your District" showNavButton="true" navButtonPress="onNavBack" class="sapUiSizeCompact">
-		<content>
 		<subHeader>
 			<OverflowToolbar>
 				<SearchField id="searchDistrict" liveChange="onSearchDistrict" placeholder="Search District"/>
 			</OverflowToolbar>
-		</subHeader>			
+		</subHeader>
+		<content>
 			<f:SimpleForm editable="true">
 				<f:content>
 					<VBox>
