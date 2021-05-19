@@ -9,17 +9,6 @@
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"resources": "resources.json",
-		"dataSources": {
-			"mainService": {
-				"uri": "/northwind/V2/Northwind/Northwind.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/metadata.xml"
-				}
-			}
-		},
 		"sourceTemplate": {
 			"id": "sap.ui.ui5-template-plugin.1worklist",
 			"version": "1.71.38"
@@ -66,10 +55,6 @@
 				"settings": {
 					"bundleName": "LMES.CovidTracker2021.i18n.i18n"
 				}
-			},
-			"": {
-				"dataSource": "mainService",
-				"preload": false
 			}
 		},
 		"routing": {
