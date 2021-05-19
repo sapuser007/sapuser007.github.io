@@ -5,11 +5,11 @@
 		<content>
 			<f:SimpleForm editable="true">
 				<f:content>
-	<subHeader>
+<subHeader>
 			<OverflowToolbar>
 				<SearchField id="searchDistrict" liveChange="onSearchDistrict" placeholder="Search District"/>
 			</OverflowToolbar>
-		</subHeader>					
+		</subHeader>						
 					<VBox>
 						<VBox>
 							<DatePicker id="DP1" placeholder="Select Date" change="handleChange" class="sapUiSmallMarginBottom" width="36%" valueFormat="dd.MM.YYYY"
