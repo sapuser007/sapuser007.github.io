@@ -244,12 +244,11 @@ sap.ui.define([
 					]
 
 				});
-				// var oFilter1 = new Filter("sessions/0/available_capacity_dose1", FilterOperator.GT, "0");
-				// var oFilter2 = new Filter("sessions/0/available_capacity_dose2", FilterOperator.GT, "0");
-				// aFilters.push(oFilter);
 				this.byId("tabSlots").getBinding("items").filter(aFilter, "Application");
+				this.byId("idSwitchAvb").setTooltip("Show Only Available Slots");
 			} else {
 				this.byId("tabSlots").getBinding("items").filter(aFilter, "Application");
+				this.byId("idSwitchAvb").setTooltip("Show Both Available & Non-Available Slots");
 			}
 		}
 	});
