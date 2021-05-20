@@ -15,7 +15,7 @@
 									<ToolbarSpacer/>
 									<!--<CheckBox text="All" valueState="None" selected="true"/>-->
 									<!--<CheckBox text="Available" valueState="Success" enabled="false"/>-->
-									<Switch state="true" customTextOn="All" customTextOff="Avb" change="onSwitch">
+									<Switch state="true" customTextOn="All" customTextOff="Avb" change="onSwitch" id="idSwitchAvb">
 										<layoutData>
 											<FlexItemData growFactor="1"/>
 										</layoutData>
