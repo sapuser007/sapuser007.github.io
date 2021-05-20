@@ -1,13 +1,13 @@
 <mvc:View controllerName="LMES.CovidTracker2021.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.f.semantic" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
-	<Page title="Please Select Your State" class="sapUiSizeCompact">
+	<Page title="Covid-19 Vaccine Live Tracker" class="sapUiSizeCompact">
 		<subHeader>
 			<OverflowToolbar>
 				<SearchField id="searchState" liveChange="onSearch" placeholder="Search State"/>
 			</OverflowToolbar>
 		</subHeader>
 		<content>
-			<f:SimpleForm editable="true">
+			<f:SimpleForm editable="true" title="Please Select Your State">
 				<f:content>
 					<List id="listIdStateList" items="{Data>/Table}" mode="SingleSelectMaster" selectionChange="onListStateSelect">
 						<ObjectListItem title="{Data>state_name}"></ObjectListItem>
