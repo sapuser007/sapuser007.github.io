@@ -3,7 +3,7 @@
 	<Page title="Covid-19 Vaccine Live Tracker" class="sapUiSizeCompact">
 		<subHeader>
 			<OverflowToolbar>
-				<SearchField id="searchState" liveChange="onSearch" placeholder="Search State"/>
+				<SearchField id="searchState" liveChange="onSearch" placeholder="Search State" width="90%"/>
 			</OverflowToolbar>
 		</subHeader>
 		<content>
