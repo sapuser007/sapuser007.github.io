@@ -3,7 +3,7 @@
 	<Page title="Please Select Your District" showNavButton="true" navButtonPress="onNavBack" class="sapUiSizeCompact">
 		<subHeader>
 			<OverflowToolbar>
-				<SearchField id="searchDistrict" liveChange="onSearchDistrict" placeholder="Search District"/>
+				<SearchField id="searchDistrict" liveChange="onSearchDistrict" placeholder="Search District" width="100%"/>
 			</OverflowToolbar>
 		</subHeader>
 		<content>
