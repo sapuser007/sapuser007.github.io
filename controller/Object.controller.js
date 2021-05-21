@@ -50,7 +50,8 @@ sap.ui.define([
 		},
 
 		onListDistrictSelect: function (oEvent) {
-			var sPath = oEvent.getParameter("listItem").getBindingContext("DataDistrict").sPath;
+			// var sPath = oEvent.getParameter("listItem").getBindingContext("DataDistrict").sPath;
+			var sPath = oEvent.getSource().getBindingContextPath();
 			var index = sPath.split("/")[2];
 			var distSelected = this.byId("listIdDistrictList").getModel("DataDistrict").oData.Table[index].district_id;
 			var dateSelected = this.byId("DP1").getValue();
