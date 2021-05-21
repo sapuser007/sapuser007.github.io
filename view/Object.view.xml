@@ -15,8 +15,8 @@
 								displayFormat="dd.MM.YYYY"/>
 						</VBox>
 						<VBox>
-							<List id="listIdDistrictList" items="{DataDistrict>/Table}" mode="SingleSelectMaster" selectionChange="onListDistrictSelect">
-								<ObjectListItem title="{DataDistrict>district_name}"></ObjectListItem>
+							<List id="listIdDistrictList" items="{DataDistrict>/Table}">
+								<ObjectListItem title="{DataDistrict>district_name}" press="onListDistrictSelect" type="Active"></ObjectListItem>
 							</List>
 						</VBox>
 					</VBox>
