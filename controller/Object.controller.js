@@ -5,8 +5,9 @@ sap.ui.define([
 	"sap/ui/core/routing/History",
 	"../model/formatter",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"	
-], function (BaseController, JSONModel, History, formatter,Filter,FilterOperator) {
+	"sap/ui/model/FilterOperator",
+	"sap/m/MessageBox"
+], function (BaseController, JSONModel, History, formatter, Filter, FilterOperator, MessageBox) {
 	"use strict";
 
 	return BaseController.extend("LMES.CovidTracker2021.controller.Object", {
@@ -51,7 +52,7 @@ sap.ui.define([
 
 		onListDistrictSelect: function (oEvent) {
 			// var sPath = oEvent.getParameter("listItem").getBindingContext("DataDistrict").sPath;
-			var sPath = oEvent.getSource().getBindingContextPath();
+			var sPath = oEvent.getSource().getBindingContextPath();			
 			var index = sPath.split("/")[2];
 			var distSelected = this.byId("listIdDistrictList").getModel("DataDistrict").oData.Table[index].district_id;
 			var dateSelected = this.byId("DP1").getValue();
@@ -59,6 +60,12 @@ sap.ui.define([
 			if (!dateSelected) {
 				this.byId("DP1").setValueState("Error");
 				this.byId("DP1").setValueStateText("Kindly select date to proceed further");
+				MessageBox.show("Kindly select date to proceed further", {
+					icon: "ERROR",
+					title: "Mandatory Date field",
+					actions: MessageBox.Action.OK,
+					emphasizedAction: MessageBox.Action.OK
+				});
 				return;
 			} else {
 				this.byId("DP1").setValueState("None");
