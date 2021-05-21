@@ -9,8 +9,8 @@
 		<content>
 			<f:SimpleForm editable="true" title="Please Select Your State">
 				<f:content>
-					<List id="listIdStateList" items="{Data>/Table}" mode="SingleSelectMaster" selectionChange="onListStateSelect">
-						<ObjectListItem title="{Data>state_name}"></ObjectListItem>
+					<List id="listIdStateList" items="{Data>/Table}">
+						<ObjectListItem title="{Data>state_name}" press="onListStateSelect" type="Active"></ObjectListItem>
 					</List>
 				</f:content>
 			</f:SimpleForm>
