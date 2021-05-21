@@ -34,7 +34,8 @@ sap.ui.define([
 		},
 
 		onListStateSelect: function (oEvent) {
-			var sPath = oEvent.getParameter("listItem").getBindingContext("Data").sPath;
+			// var sPath = oEvent.getParameter("listItem").getBindingContext("Data").sPath;
+			var sPath = oEvent.getSource().getBindingContextPath();
 			var index = sPath.split("/")[2];
 			var stateSelected = this.byId("listIdStateList").getModel("Data").oData.Table[index].state_id;
 			this.getRouter().navTo("object", {
